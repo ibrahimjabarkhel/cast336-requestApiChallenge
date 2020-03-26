@@ -1,0 +1,22 @@
+<%- include ('templates/header'); -%>
+    
+    <div class="container">
+        <div class="form-group row">
+            
+            <div  class="col-sm-3" class="cover" id="image">
+                <img class="cover" src=<%=data[isbnNumber].cover.medium%> />
+            </div>
+            
+            <div  class="col-sm-4" class="form-control" class="info" id="bookInfo">
+                <br>Title :  <%=data[isbnNumber].title%>
+                <br>Author :  <%=data[isbnNumber].authors[0].name%>
+                <br>Publish :   <%=data[isbnNumber].publish_date%>
+                <br>publisher :  <%=data[isbnNumber].publishers[0].name%> 
+                <br>ISBN :  <%=data[isbnNumber].identifiers.isbn_10%> 
+                <br>Pages :   <%=data[isbnNumber].number_of_pages%>
+            </div>
+          
+        </div>
+    </div>
+
+<%- include ('templates/footer'); -%>
